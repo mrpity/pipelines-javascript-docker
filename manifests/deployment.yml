@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: mrpitypipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mrpitypipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: mrpitypipelinesjavascriptdocker 
+          image: mypitycontainerregistry.azurecr.io/mrpitypipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
